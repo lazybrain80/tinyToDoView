@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
-import DatePicker from "react-datepicker";
+import DatePicker from "react-date-picker";
 
 const Create = () => {
   const [show, setShow] = useState(false);
@@ -27,10 +27,7 @@ const Create = () => {
           <Form>
             <Form.Group className="mb-3">
               <Form.Label>Date</Form.Label>
-              <DatePicker
-                selected={startDate}
-                onChange={(date) => setStartDate(date)}
-              />
+              <DatePicker value={startDate} onChange={setStartDate} />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>TO-DO</Form.Label>
