@@ -5,6 +5,7 @@ import DatePicker from "react-date-picker";
 
 const Create = () => {
   const [show, setShow] = useState(false);
+  const [todoContent, setTodoContent] = useState("");
 
   const handleShow = () => setShow(true);
   const handleClose = () => {
@@ -31,7 +32,12 @@ const Create = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>TO-DO</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control
+                as="textarea"
+                rows={3}
+                value={todoContent}
+                onChange={(e) => setTodoContent(e.target.value)}
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
